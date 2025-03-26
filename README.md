@@ -15,7 +15,7 @@ and, among others, defines a composite component, as follows:
 
 Running this reproducer, as follows;
 
-    $ git clone 
+    $ git clone https://github.com/nicolasduminil/quarkus-primefaces-issue
     $ cd
     $ mvn package
     $ java -jar target/quarkus-app/quarkus-run.jar
