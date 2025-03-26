@@ -1,0 +1,31 @@
+<ui:component
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="jakarta.faces.facelets"
+  xmlns:h="jakarta.faces.html"
+  xmlns:f="jakarta.faces.core"
+  xmlns:p="http://primefaces.org/ui"
+  xmlns:composite="jakarta.faces.composite">
+
+  <composite:interface>
+    <composite:attribute name="bean" required="true" type="java.lang.Object"/>
+  </composite:interface>
+
+  <composite:implementation>
+    <p:tab title="1. Tab1">
+      <h:panelGrid columns="1" cellpadding="7" styleClass="mb-3">
+        <p:outputLabel for="some-text-id" value="Some text:"/>
+        <p:inputText id="some-text-id" size="40" maxlength="255"
+                     value="#{cc.attrs.bean.someText}" required="true"
+                     label="some-text-id">
+          <f:validateLength minimum="30"/>
+        </p:inputText>
+        <p:message for="some-text-id" display="icon"/>
+        <p:commandButton
+          value="Submit"
+          process="@this some-text-id"
+          action="#{cc.attrs.bean.submit}"
+          icon="pi pi-check"/>
+      </h:panelGrid>
+    </p:tab>
+  </composite:implementation>
+</ui:component>
