@@ -17,10 +17,13 @@ public class MyBean
   {
     try
     {
+      System.out.println (">>> MyBean.submit(): Expecting to catch a NoSuchElememntException");
       config.getValue("my.prop", String.class);
+      System.out.println (">>> MyBean.submit(): We never come here, showing that an exception is raised, but silently.");
     }
     catch (NoSuchElementException e)
     {
+      System.out.println (">>> MyBean.submit(): The expected exception is raised, and we are able to catch it");
       e.printStackTrace();
     }
   }
