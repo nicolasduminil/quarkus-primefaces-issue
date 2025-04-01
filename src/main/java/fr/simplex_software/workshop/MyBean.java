@@ -1,15 +1,27 @@
 package fr.simplex_software.workshop;
 
-import jakarta.enterprise.context.*;
+import io.smallrye.config.*;
 import jakarta.faces.view.*;
 import jakarta.inject.*;
+
+import java.util.NoSuchElementException;
 
 @Named
 @ViewScoped
 public class MyBean
 {
+  @Inject
+  private SmallRyeConfig config;
+
   public void submit()
   {
-    System.out.println("Hello World!");
+    try
+    {
+      config.getValue("my.prop", String.class);
+    }
+    catch (NoSuchElementException e)
+    {
+      e.printStackTrace();
+    }
   }
 }

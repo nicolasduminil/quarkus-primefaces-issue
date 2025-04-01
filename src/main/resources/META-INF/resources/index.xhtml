@@ -1,9 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="jakarta.faces.facelets">
-<body>
-<ui:composition template="./templates/template.xhtml">
-  <ui:define name="title">Test Quarkus PrimeFaces Extension</ui:define>
-  <ui:define name="content"/>
-</ui:composition>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html" xmlns:p="http://primefaces.org/ui">
+<head>
+  <style>
+      button.ui-button {
+          margin-right: .5rem;
+      }
+  </style>
+</head>
+<h:body>
+  <h:form>
+    <div class="card">
+      <h5>Basic</h5>
+      <p:commandButton type="button" value="Submit" action="#{myBean.submit()}"/>
+    </div>
+  </h:form>
+</h:body>
 </html>
