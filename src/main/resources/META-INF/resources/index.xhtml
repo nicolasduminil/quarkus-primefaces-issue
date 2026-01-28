@@ -1,18 +1,44 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html" xmlns:p="http://primefaces.org/ui">
-<head>
-  <style>
-      button.ui-button {
-          margin-right: .5rem;
-      }
-  </style>
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="http://primefaces.org/ui">
+<head/>
 <h:body>
-  <h:form>
-    <div class="card">
-      <h5>Basic</h5>
-      <p:commandButton type="button" value="Submit" action="#{myBean.submit()}"/>
-    </div>
-  </h:form>
+  <div class="card">
+    <h:form>
+      <h5>Testing graphicImage as a menuItem</h5>
+      <p:megaMenu orientation="horizontal" autoDisplay="false">
+        <p:submenu label="Videos" icon="pi pi-fw pi-video">
+          <p:column>
+            <p:submenu label="Video 1">
+              <p:menuitem value="Video 1.1"/>
+              <p:menuitem value="Video 1.2"/>
+            </p:submenu>
+            <p:submenu label="Video 2">
+              <p:menuitem value="Video 2.1"/>
+              <p:menuitem value="Video 2.2"/>
+            </p:submenu>
+          </p:column>
+
+          <p:column>
+            <p:submenu label="Video 3">
+              <p:menuitem value="Video 3.1"/>
+              <p:menuitem value="Video 3.2"/>
+            </p:submenu>
+            <p:submenu label="Video 4">
+              <p:menuitem value="Video 4.1"/>
+              <p:menuitem value="Video 4.2"/>
+            </p:submenu>
+          </p:column>
+
+          <p:column>
+            <strong>Sopranos</strong>
+            <p:graphicImage value="/images/primefaces-logo.svg" width="200"/>
+          </p:column>
+        </p:submenu>
+      </p:megaMenu>
+    </h:form>
+  </div>
 </h:body>
 </html>
