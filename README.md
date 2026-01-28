@@ -1,6 +1,6 @@
 # Quarkus PrimeFaces:  Can't place customized content in a menuItem column
 
-This project is a reproducer of the Isuue #337 registered with Quarkusio support. 
+This project is a reproducer of the Isuue #448 registered with Quarkusio support. 
 It allows to reproduce the issue described below, related to the `quarkus-primefaces`
 and `quarkus-primefaces-extensions`, relative to the definition of the exception handling.
 
